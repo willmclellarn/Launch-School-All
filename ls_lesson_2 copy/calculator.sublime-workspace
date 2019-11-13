@@ -1,0 +1,250 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"email",
+				"emailaddress"
+			],
+			[
+				"words",
+				"words_combo"
+			],
+			[
+				"bread",
+				"breadcrumbs_html"
+			],
+			[
+				"path",
+				"path_array"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/willmclellarn/Documents/GitHub/ls_lesson_2/calculator.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Gen-Exercises/gen1.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Gen-Exercises/gen3.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Gen-Exercises/gen6.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Gen-Exercises/gen7.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Gen-Exercises/gen8.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Gen-Exercises/gen9.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Gen-Exercises/gen10.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Gen-Exercises/gen11.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Gen-Exercises/gen12.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Gen-Exercises/gen13.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Gen-Exercises/gen14.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Gen-Exercises/gen15.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Gen-Exercises/gen16.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Gen-Exercises/gen17.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/More-Stuff/more1.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Hashes/hash8.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Hashes/hash7.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Hashes/hash1.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Hashes/hash2.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Hashes/hash3.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Hashes/hash4.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Hashes/hash5.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Hashes/hash6.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Arrays/array1.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Arrays/array2.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Arrays/array3.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Arrays/array4.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Arrays/array5.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Arrays/array6.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Arrays/array7.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Loops-Iterators/loop4.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Loops-Iterators/loop3.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Loops-Iterators/loop2.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Loops-Iterators/loop1.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Flow Control/flow4.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Flow Control/flow1.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Flow Control/flow2.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Flow Control/flow3.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Flow Control/flow5.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Flow Control/flow6.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Methods/flow1.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Methods/ex1.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Methods/ex2.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Methods/ex3.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Methods/ex4.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Methods/ex5.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Methods/ex6.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Methods/mutate.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Variables/say.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Variables/age.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Variables/name.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Variables/ex5.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/age.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Basics/ex7.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Basics/ex6.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Basics/ex5.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Basics/ex4.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Basics/ex3.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Basics/exercise2.rb",
+		"/Users/willmclellarn/Documents/GitHub/ls-rubyintro/Basics/exercise1.rb",
+		"/Users/willmclellarn/Desktop/embeddedform.html",
+		"/Users/willmclellarn/Desktop/pareto-logo-mark-color.svg",
+		"/Users/willmclellarn/Desktop/LogoReverse.svg",
+		"/Users/willmclellarn/Desktop/Personal Site/demo-1.js",
+		"/Users/willmclellarn/Desktop/Homepage.html"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 175.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Ruby/Ruby.sublime-build",
+	"project": "calculator.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 239.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
