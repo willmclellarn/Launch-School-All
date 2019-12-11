@@ -8,6 +8,6 @@ a_outer = 42
   c_outer_id = c_outer.object_id
   d_outer_id = d_outer.object_id
 
-  console.log(a_outer_id)
+ puts a_outer_id
 
   #comment test
