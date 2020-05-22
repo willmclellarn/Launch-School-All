@@ -86,9 +86,9 @@ munsters = {
   "Marilyn" => { "age" => 23, "gender" => "female"}
 }
 
-munsters.each_with_object(munsters) { |key, value|
-  if munsters[key]["age"] <= 17
-    munsters[key]["age_group"] = "kid"
+munsters.each { |key, value|
+  if value["age"] <= 17
+    value["age_group"] = "kid"
   else 
     if munsters[key]["age"] <= 64
     munsters[key]["age_group"] = "adult"
