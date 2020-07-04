@@ -31,40 +31,36 @@ def deal_first_cards(deck)
   return [card, card2]
 end
 
-def display_first_cards(player_cards, computer_cards)
+def display_first_cards(player_cards, dealer_cards)
   puts ''
   puts 'Player Cards are: '
   player_cards.each do |card|
     puts card.join(' of ')
   end
   puts ''
-  puts 'Computer Cards:'
-  computer_cards.each do |card|
+  puts 'Dealer Cards:'
+  dealer_cards.each do |card|
     puts card.join(' of ')
   end
+  puts ''
 end
 
 def player_turn(cards, deck)
   loop do
-    display_cards(cards)
     puts "Would you like to hit or stay?"
     answer = gets.chomp
-    break if answer == 'stay'
-    deal_card(cards, deck)
+    if answer != 'stay'
+      deal_card(cards, deck)
+    end 
     display_cards(cards)
-    break if busted?(cards)
+    break if answer == 'stay' || busted?(cards)
   end
-  
-  if busted?(cards)
-    puts 'Want to play again?'
-  end
-
 end
 
 def busted?(cards)
   if get_blackjack_value(cards) > 21
-    return true
-  else return false
+     true
+  else false
   end
 end
 
@@ -101,7 +97,7 @@ end
 
 def display_cards(cards)
   puts ''
-  puts 'Current Cards are: '
+  puts 'Live Cards are: '
   cards.each do |card|
     puts card.join(' of ')
   end
@@ -111,34 +107,63 @@ def dealer_turn(cards, deck)
   while get_blackjack_value(cards) < 17
     puts "Dealer currently has #{get_blackjack_value(cards)}"
     deal_card(cards, deck)
+    display_cards(cards)
   end
   puts "The Dealer ended up with #{get_blackjack_value(cards)}"
+  if busted?(cards)
+    puts "The Dealer busted!"
+  end
 end
 
-def compare_cards(computer_cards, player_cards)
-  if get_blackjack_value(computer_cards) > 21 || get_blackjack_value(player_cards) == 21 || get_blackjack_value
-    puts "Player won!"
-  elsif get_blackjack_value(computer_cards) == get_blackjack_value(player_cards)
-    puts "Push, it's a tie boys and girls!"
-  elsif get_blackjack_value(computer_cards) > get_blackjack_value(player_cards)
-    puts "Player"
-
+def compare_scores(player_score, dealer_score)
+  if player_score == 21
+    return "Player won!"
+  elsif player_score == dealer_score
+    return "Tie game :)"
+  elsif dealer_score > player_score
+    return "Dealer won!"
+  else return "Player won!"
+  end
 end
 
-# Begin Program Run
+#--- Begin Program Run -----
+loop do
+  deck = initialize_deck
+  # created the deck
 
-deck = initialize_deck
-puts 'Welcome to 21!'
-player_cards = deal_first_cards(deck)
-computer_cards = deal_first_cards(deck)
-display_first_cards(player_cards, computer_cards)
-player_turn(player_cards, deck)
-if get_blackjack_value(player_cards) <= 21
-  puts "Player is staying at #{get_blackjack_value(player_cards)}"
+  puts 'Welcome to 21!'
+  player_cards = deal_first_cards(deck)
+  dealer_cards = deal_first_cards(deck)
+  # created some hands
+
+  display_first_cards(player_cards, dealer_cards)
+  # show the hands
+
+  player_turn(player_cards, deck)
+  # let the playa play
+  if busted?(player_cards)
+    puts 'Want to play again?'
+    answer = gets.chomp
+    break unless answer.downcase.start_with?('y')
+  end
+
+  player_score = get_blackjack_value(player_cards)
+  # store the score (it can't be over 21)
+
+  puts "Player is staying at #{player_score}"
   puts "Now, it's the dealer's turn..."
   puts " "
-  dealer_turn(computer_cards, deck)
-end
-compare_cards(computer_cards,player_cards)
+  dealer_turn(dealer_cards, deck)
+  #let the dealer play
 
+  dealer_score = get_blackjack_value(dealer_cards)
+  # store the dealer's score (it can be over 21)
+
+  if player_score && dealer_score <= 21
+    puts "#{(compare_scores(player_score,dealer_score))} won!"
+    puts 'Want to play again?'
+    answer = gets.chomp
+    break unless answer.downcase.start_with?('y')
+  end
+end
 # End Program Run
