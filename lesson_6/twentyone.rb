@@ -28,7 +28,7 @@ def deal_first_cards(deck)
   deck.delete(card)
   card2 = deck.sample
   deck.delete(card2)
-  return [card, card2]
+  [card, card2]
 end
 
 def display_first_cards(player_cards, dealer_cards)
@@ -58,10 +58,7 @@ def player_turn(cards, deck)
 end
 
 def busted?(cards)
-  if get_blackjack_value(cards) > 21
-     true
-  else false
-  end
+  get_blackjack_value(cards) > 21
 end
 
 def get_blackjack_value(cards)
@@ -110,9 +107,6 @@ def dealer_turn(cards, deck)
     display_cards(cards)
   end
   puts "The Dealer ended up with #{get_blackjack_value(cards)}"
-  if busted?(cards)
-    puts "The Dealer busted!"
-  end
 end
 
 def compare_scores(player_score, dealer_score)
@@ -142,6 +136,7 @@ loop do
   player_turn(player_cards, deck)
   # let the playa play
   if busted?(player_cards)
+    puts "Dang, you busted playa!"
     puts 'Want to play again?'
     answer = gets.chomp
     break unless answer.downcase.start_with?('y')
@@ -156,11 +151,18 @@ loop do
   dealer_turn(dealer_cards, deck)
   #let the dealer play
 
+  if busted?(dealer_cards)
+    puts "The Dealer busted, you won playa!"
+    puts 'Want to play again?'
+    answer = gets.chomp
+    break unless answer.downcase.start_with?('y')
+  end
+
   dealer_score = get_blackjack_value(dealer_cards)
   # store the dealer's score (it can be over 21)
 
   if player_score && dealer_score <= 21
-    puts "#{(compare_scores(player_score,dealer_score))} won!"
+    puts "#{(compare_scores(player_score, dealer_score))}"
     puts 'Want to play again?'
     answer = gets.chomp
     break unless answer.downcase.start_with?('y')
