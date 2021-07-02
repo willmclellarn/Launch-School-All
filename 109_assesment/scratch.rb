@@ -131,12 +131,70 @@
 # age = rand(20..200)
 # puts "Teddy is #{age} years old!"
 
-puts "Enter the length of the room in meters:"
-length = gets.chomp().to_f
-puts "Enter the width of the room in meters:"
-width = gets.chomp().to_f
+# puts "Enter the length of the room in meters:"
+# length = gets.chomp().to_f
+# puts "Enter the width of the room in meters:"
+# width = gets.chomp().to_f
+#
+# area_meters = (length * width).round(2)
+# area_feet = (area_meters * 10.7639).round(2)
+#
+# puts "The area of the room is #{area_meters} square meters (#{area_feet} square feet))."
+#
+#
+# puts "What is the bill?"
+# bill = gets.chomp().to_f.round(2)
+# puts "What is the tip percentage?"
+# tip_percentage = gets.chomp().to_f.round(2)
+#
+# tip = (bill * (tip_percentage/100)).round(2)
+# total = (bill + tip).round(2)
+#
+# puts "The tip is $#{tip}"
+# puts "The total is $#{total}"
+#
+# What is the bill? 200
+# What is the tip percentage? 15
+#
+# The tip is $30.0
+# The total is $230.0
 
-area_meters = (length * width).round(2)
-area_feet = (area_meters * 10.7639).round(2)
+# puts "What's your name?"
+# name = gets.chomp()
+#
+# if name[name.length-1] == "!"
+#   puts "HI #{name.upcase}. WHY ARE WE SCREAMING?"
+# else puts "Hi #{name}."
+# end
 
-puts "The area of the room is #{area_meters} square meters (#{area_feet} square feet))."
+# 99.times {|i|
+#   i += 1
+#   if (i) % 2 == 1
+#     puts i
+#   end
+# }
+#
+# >> Please enter an integer greater than 0:
+# 5
+# >> Enter 's' to compute the sum, 'p' to compute the product.
+# s
+# The sum of the integers between 1 and 5 is 15.
+
+puts ">> Please enter an integer greater than 0:"
+int = gets.chomp().to_i
+puts ">> Enter 's' to compute the sum, 'p' to compute the product."
+operator = gets.chomp()
+text = ""
+
+if operator == 's'
+  text = "sum"
+  answer = (1..int).sum()
+else if operator == 'p'
+  text = "product"
+  answer = (1..int).inject(:*) || 1
+  puts factorial
+  end
+end
+# code
+
+puts "The #{text} of the integers between 1 and #{int} is #{answer}."
