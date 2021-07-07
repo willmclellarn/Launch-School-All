@@ -180,21 +180,150 @@
 # s
 # The sum of the integers between 1 and 5 is 15.
 
-puts ">> Please enter an integer greater than 0:"
-int = gets.chomp().to_i
-puts ">> Enter 's' to compute the sum, 'p' to compute the product."
-operator = gets.chomp()
-text = ""
+# puts ">> Please enter an integer greater than 0:"
+# int = gets.chomp().to_i
+# puts ">> Enter 's' to compute the sum, 'p' to compute the product."
+# operator = gets.chomp()
+# text = ""
+#
+# if operator == 's'
+#   text = "sum"
+#   answer = (1..int).sum()
+# else if operator == 'p'
+#   text = "product"
+#   answer = (1..int).inject(:*) || 1
+#   puts factorial
+#   end
+# end
+# # code
+#
+# puts "The #{text} of the integers between 1 and #{int} is #{answer}."
 
-if operator == 's'
-  text = "sum"
-  answer = (1..int).sum()
-else if operator == 'p'
-  text = "product"
-  answer = (1..int).inject(:*) || 1
-  puts factorial
-  end
+#
+# puts "Enter the 1st number:"
+# first_num = gets.chomp().to_i
+# puts "Enter the 2nd number:"
+# second_num = gets.chomp().to_i
+# puts "Enter the 3rd number:"
+# third_num = gets.chomp().to_i
+# puts "Enter the 4th number:"
+# fourth_num = gets.chomp().to_i
+# puts "Enter the 5th number:"
+# fifth_num = gets.chomp().to_i
+# puts "Enter the last number:"
+# last_num = gets.chomp().to_i
+#
+# arr = [first_num, second_num, third_num, fourth_num, fifth_num]
+# puts (arr.include?(last_num)) ? "The number #{last_num} appears in #{arr}." : "The number #{last_num} does not appear in #{arr}."
+
+#
+# ==> Enter the 1st number:
+# 25
+# ==> Enter the 2nd number:
+# 15
+# ==> Enter the 3rd number:
+# 20
+# ==> Enter the 4th number:
+# 17
+# ==> Enter the 5th number:
+# 23
+# ==> Enter the last number:
+# 17
+# The number 17 appears in [25, 15, 20, 17, 23].
+#
+# def xor?(bool1, bool2)
+#   if bool1 && !bool2 || !bool1 && bool2
+#     return true
+#   else return false
+#   end
+# end
+#
+# puts xor?(5.even?, 4.even?) == true
+# puts xor?(5.odd?, 4.odd?) == true
+# puts xor?(5.odd?, 4.even?) == false
+# puts xor?(5.even?, 4.odd?) == false
+
+# def palindrome?(str)
+#   str == str.reverse
+# end
+#
+# palindrome?('madam') == true
+# palindrome?('Madam') == false          # (case matters)
+# palindrome?("madam i'm adam") == false # (all characters matter)
+# palindrome?('356653') == true
+
+# def palindrome?(str)
+#   str == str.reverse
+# end
+#
+# def real_palindrome?(str)
+#   str.downcase!
+#
+#   palindrome?(str)
+# end
+#
+# real_palindrome?('madam') == true
+# real_palindrome?('Madam') == true           # (case does not matter)
+# real_palindrome?("Madam, I'm Adam") == true # (only alphanumerics matter)
+# real_palindrome?('356653') == true
+# real_palindrome?('356a653') == true
+# real_palindrome?('123ab321') == false
+#
+# def palindromic_number?(int)
+#   int == (int.to_s.reverse.to_i)
+# end
+#
+# puts palindromic_number?(34543) == true
+# puts palindromic_number?(123210) == false
+# puts palindromic_number?(22) == true
+# puts palindromic_number?(5) == true
+
+
+
+def rotate_array(arr)
+  arr << arr.shift
 end
-# code
 
-puts "The #{text} of the integers between 1 and #{int} is #{answer}."
+def rotate_rightmost_digits(int, rotate_num)
+  arr = int.digits.reverse!
+  new_arr = arr.slice!(-rotate_num..arr.length-1)
+  final_arr = (arr + rotate_array(new_arr)).join.to_i
+end
+
+# rotate_rightmost_digits(735291, 1) == 735291
+# rotate_rightmost_digits(735291, 2) == 735219
+# rotate_rightmost_digits(735291, 3) == 735912
+# rotate_rightmost_digits(735291, 4) == 732915
+# rotate_rightmost_digits(735291, 5) == 752913
+# rotate_rightmost_digits(735291, 6) == 352917
+
+
+def max_rotation(number_to_rotate)
+  n = number_to_rotate.digits.size
+    # new_num = rotate_rightmost_digits(number_to_rotate, n)
+    # rotate_rightmost_digits(new_num, n - 1 )
+
+  puts rotate_rightmost_digits(rotate_rightmost_digits(number_to_rotate, n), n-1)
+
+  # def max_rotation(number)
+  #   number_digits = number.to_s.size
+  #   number_digits.downto(2) do |n|
+  #     number = rotate_rightmost_digits(number, n)
+  #   end
+  #   number
+  # end
+
+  # first_iteration = rotate_rightmost_digits(number_to_rotate, n)
+  # # puts first_iteration
+  # second_iteration = rotate_rightmost_digits(first_iteration, n-1)
+  # # puts second_iteration
+  # third_iteration = rotate_rightmost_digits(second_iteration, n-2)
+  # # puts third_iteration
+
+end
+
+puts max_rotation(735291) == 321579
+# puts max_rotation(3) == 3
+# puts max_rotation(35) == 53
+# puts max_rotation(105) == 15 # the leading zero gets dropped
+# puts max_rotation(8_703_529_146) == 7_321_609_845
