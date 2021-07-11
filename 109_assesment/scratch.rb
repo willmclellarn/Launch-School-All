@@ -296,34 +296,66 @@ end
 # rotate_rightmost_digits(735291, 4) == 732915
 # rotate_rightmost_digits(735291, 5) == 752913
 # rotate_rightmost_digits(735291, 6) == 352917
-
-
-def max_rotation(number_to_rotate)
-  n = number_to_rotate.digits.size
-    # new_num = rotate_rightmost_digits(number_to_rotate, n)
-    # rotate_rightmost_digits(new_num, n - 1 )
-
-  puts rotate_rightmost_digits(rotate_rightmost_digits(number_to_rotate, n), n-1)
-
-  # def max_rotation(number)
-  #   number_digits = number.to_s.size
-  #   number_digits.downto(2) do |n|
-  #     number = rotate_rightmost_digits(number, n)
-  #   end
-  #   number
-  # end
-
-  # first_iteration = rotate_rightmost_digits(number_to_rotate, n)
-  # # puts first_iteration
-  # second_iteration = rotate_rightmost_digits(first_iteration, n-1)
-  # # puts second_iteration
-  # third_iteration = rotate_rightmost_digits(second_iteration, n-2)
-  # # puts third_iteration
-
-end
-
-puts max_rotation(735291) == 321579
+#
+#
+# def max_rotation(number_to_rotate)
+#   n = number_to_rotate.digits.size
+#     # new_num = rotate_rightmost_digits(number_to_rotate, n)
+#     # rotate_rightmost_digits(new_num, n - 1 )
+#
+#   puts rotate_rightmost_digits(rotate_rightmost_digits(number_to_rotate, n), n-1)
+#
+#   # def max_rotation(number)
+#   #   number_digits = number.to_s.size
+#   #   number_digits.downto(2) do |n|
+#   #     number = rotate_rightmost_digits(number, n)
+#   #   end
+#   #   number
+#   # end
+#
+#   # first_iteration = rotate_rightmost_digits(number_to_rotate, n)
+#   # # puts first_iteration
+#   # second_iteration = rotate_rightmost_digits(first_iteration, n-1)
+#   # # puts second_iteration
+#   # third_iteration = rotate_rightmost_digits(second_iteration, n-2)
+#   # # puts third_iteration
+#
+# end
+#
+# puts max_rotation(735291) == 321579
 # puts max_rotation(3) == 3
 # puts max_rotation(35) == 53
 # puts max_rotation(105) == 15 # the leading zero gets dropped
 # puts max_rotation(8_703_529_146) == 7_321_609_845
+
+
+def still_on (num_switches)
+  # declare an array of size n with all boolean values true (rd 1)
+  switch_arr = Array.new(num_switches, true)
+  # print switch_arr
+  # build a loop, starting at i (2), looking for array indices + 1 that are divisble by i
+  rd = 2
+  while rd <= num_switches
+    switch_arr.each_index { |index|
+      if (index + 1) % rd == 0
+        switch_arr[index] = !switch_arr[index]
+      end
+    }
+    rd += 1
+  end
+print switch_arr
+# iterate over true/false values in the array, return an array, of the index value + 1
+# of each true value
+return_arr = []
+
+switch_arr.each_index { |index|
+  if switch_arr[index] == true
+    return_arr << index + 1
+  end
+}
+print return_arr
+
+end
+
+still_on(5)
+still_on(10)
