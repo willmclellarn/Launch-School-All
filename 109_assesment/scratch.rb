@@ -279,16 +279,16 @@
 # puts palindromic_number?(5) == true
 
 
-
-def rotate_array(arr)
-  arr << arr.shift
-end
-
-def rotate_rightmost_digits(int, rotate_num)
-  arr = int.digits.reverse!
-  new_arr = arr.slice!(-rotate_num..arr.length-1)
-  final_arr = (arr + rotate_array(new_arr)).join.to_i
-end
+#
+# def rotate_array(arr)
+#   arr << arr.shift
+# end
+#
+# def rotate_rightmost_digits(int, rotate_num)
+#   arr = int.digits.reverse!
+#   new_arr = arr.slice!(-rotate_num..arr.length-1)
+#   final_arr = (arr + rotate_array(new_arr)).join.to_i
+# end
 
 # rotate_rightmost_digits(735291, 1) == 735291
 # rotate_rightmost_digits(735291, 2) == 735219
@@ -329,33 +329,147 @@ end
 # puts max_rotation(8_703_529_146) == 7_321_609_845
 
 
-def still_on (num_switches)
-  # declare an array of size n with all boolean values true (rd 1)
-  switch_arr = Array.new(num_switches, true)
-  # print switch_arr
-  # build a loop, starting at i (2), looking for array indices + 1 that are divisble by i
-  rd = 2
-  while rd <= num_switches
-    switch_arr.each_index { |index|
-      if (index + 1) % rd == 0
-        switch_arr[index] = !switch_arr[index]
-      end
-    }
-    rd += 1
-  end
-print switch_arr
-# iterate over true/false values in the array, return an array, of the index value + 1
-# of each true value
-return_arr = []
+# def still_on (num_switches)
+#   # declare an array of size n with all boolean values true (rd 1)
+#   switch_arr = Array.new(num_switches, true)
+#   # print switch_arr
+#   # build a loop, starting at i (2), looking for array indices + 1 that are divisble by i
+#   rd = 2
+#   while rd <= num_switches
+#     switch_arr.each_index { |index|
+#       if (index + 1) % rd == 0
+#         switch_arr[index] = !switch_arr[index]
+#       end
+#     }
+#     rd += 1
+#   end
+# print switch_arr
+# # iterate over true/false values in the array, return an array, of the index value + 1
+# # of each true value
+# return_arr = []
+#
+# switch_arr.each_index { |index|
+#   if switch_arr[index] == true
+#     return_arr << index + 1
+#   end
+# }
+# print return_arr
+#
+# end
+#
+# still_on(5)
+# still_on(10)
 
-switch_arr.each_index { |index|
-  if switch_arr[index] == true
-    return_arr << index + 1
-  end
-}
-print return_arr
+# def diamond(n)
+#   1.upto(n) { |i|
+#     if i % 2 == 1
+#       ((n-i)/2).times {print " "}
+#       i.times {print "*"}
+#       print "\n"
+#     end
+#   }
+#   (n-1).downto(1) { |i|
+#     if i % 2 == 1
+#       ((n-i)/2).times {print " "}
+#       i.times {print "*"}
+#       print "\n"
+#     end
+#   }
+# end
+#
+# diamond(9)
+# diamond(20)
+#
+# def minilang(string_args)
+#   register = 0
+#   stack = []
+#   string_args.split.each do |operator|
+#     # puts operator
+#     case operator
+#     when 'PUSH'
+#       stack << register
+#     when 'PRINT'
+#       puts register
+#     when 'ADD'
+#       register = stack.pop + register
+#     when 'SUB'
+#       register = register - stack.pop
+#     when 'MULT'
+#       register = register * stack.pop
+#     when 'DIV'
+#       register = register / stack.pop
+#     when 'MOD'
+#       register = register % stack.pop
+#     when 'POP'
+#       register = stack.pop
+#     else
+#       register = operator.to_i
+#     end
+#   end
+#   puts "round over"
+# end
+#
+# minilang('PRINT')
+# # 0
+#
+# minilang('5 PUSH 3 MULT PRINT')
+# # 15
+#
+# minilang('5 PRINT PUSH 3 PRINT ADD PRINT')
+# # 5
+# # 3
+# # 8
+#
+# minilang('5 PUSH POP PRINT')
+# # 5
+#
+# minilang('3 PUSH 4 PUSH 5 PUSH PRINT ADD PRINT POP PRINT ADD PRINT')
+# # 5
+# # 10
+# # 4
+# # 7
+#
+# minilang('3 PUSH PUSH 7 DIV MULT PRINT ')
+# # 6
+#
+# minilang('4 PUSH PUSH 7 MOD MULT PRINT ')
+# # 12
+#
+# minilang('-3 PUSH 5 SUB PRINT')
+# # 8
+#
+# minilang('6 PUSH')
+# # (nothing printed; no PRINT commands)
 
+
+# DIGIT_HASH = {
+#   'zero' => '0', 'one' => '1', 'two' => '2', 'three' => '3', 'four' => '4',
+#   'five' => '5', 'six' => '6', 'seven' => '7', 'eight' => '8', 'nine' => '9'
+# }.freeze
+#
+# def word_to_digit(string)
+#   DIGIT_HASH.each do |word|
+#     string.gsub!()
+#   end
+#
+# end
+#
+# puts word_to_digit('Please call me at five five five one two three four. Thanks.') == 'Please call me at 5 5 5 1 2 3 4. Thanks.'
+# puts word_to_digit('Please call me at five five five one two three four. Thanks.')
+
+def fibonacci(nth)
+  # goal is to return the nth fibonacci number
+  # this nth fibonacci number is equal to the previous two fibonacci numbers added
+  if nth == 1 || nth == 2
+    return 1
+  else return fibonacci(nth-1) + fibonacci(nth-2)
+  end
 end
 
-still_on(5)
-still_on(10)
+puts fibonacci(1) == 1
+puts fibonacci(2) == 1
+puts fibonacci(3) == 2
+puts fibonacci(4) == 3
+puts fibonacci(5) == 5
+puts fibonacci(12) == 144
+puts fibonacci(20) == 6765
