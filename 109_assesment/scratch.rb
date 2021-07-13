@@ -457,19 +457,29 @@
 # puts word_to_digit('Please call me at five five five one two three four. Thanks.') == 'Please call me at 5 5 5 1 2 3 4. Thanks.'
 # puts word_to_digit('Please call me at five five five one two three four. Thanks.')
 
-def fibonacci(nth)
-  # goal is to return the nth fibonacci number
-  # this nth fibonacci number is equal to the previous two fibonacci numbers added
-  if nth == 1 || nth == 2
-    return 1
-  else return fibonacci(nth-1) + fibonacci(nth-2)
-  end
-end
-
-puts fibonacci(1) == 1
-puts fibonacci(2) == 1
-puts fibonacci(3) == 2
-puts fibonacci(4) == 3
-puts fibonacci(5) == 5
-puts fibonacci(12) == 144
-puts fibonacci(20) == 6765
+# def fibonacci(nth)
+#   # goal is to return the nth fibonacci number
+#   # this nth fibonacci number is equal to the previous two fibonacci numbers added
+#   if nth == 1 || nth == 2
+#     return 1
+#   else return fibonacci(nth-1) + fibonacci(nth-2)
+#   end
+# end
+#
+# def fibonacci(nth)
+#   sum = 0
+#   if nth <= 2
+#     return 1
+#   else
+#     sum += 2
+#
+#
+# end
+#
+# puts fibonacci(1) == 1
+# puts fibonacci(2) == 1
+# puts fibonacci(3) == 2
+# puts fibonacci(4) == 3
+# puts fibonacci(5) == 5
+# puts fibonacci(12) == 144
+# puts fibonacci(20) == 6765
